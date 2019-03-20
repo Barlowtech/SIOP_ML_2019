@@ -1,4 +1,4 @@
-setwd("D:/Google Drive/2019 SIOP_ML")
+setwd("D:/Google Drive/2019 SIOP_ML") # this wil need to be updated to the location you saved your file(s)
 
 library(tidyverse) # general utility & workflow functions
 library(tidytext) # tidy implimentation of NLP methods
@@ -24,7 +24,7 @@ library(neuralnet)
 #import data
 soi.data <- read_csv("siop_ml_train_participant.csv") #bring in train data
 
-lem.soi.data <- lemmatize_strings(soi.data)
+lem.soi.data <- lemmatize_strings(soi.data) #lemmatization would up being a dead-end for us
 
 #merge responses
 soi.data$all_text <- paste(soi.data$open_ended_1, soi.data$open_ended_2, soi.data$open_ended_3, 
